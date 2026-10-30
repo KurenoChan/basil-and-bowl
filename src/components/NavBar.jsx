@@ -1,10 +1,19 @@
+import { NavLink } from "react-router-dom";
+
 export default function NavBar() {
   return (
     <nav className="navbar">
-      <img src="/logo.png" alt="" width="42" height="42" />
-      Basil & Bowl
+      <NavLink className="brand" to="/">
+        <img src="/logo.png" alt="" width="42" height="42" />
+        Basil & Bowl
+      </NavLink>
       <ul className="links">
-        {/* Add the NavBar links. */}
+        <li>
+          <NavLink to="/">Home</NavLink>
+        </li>
+        <li>
+          <NavLink to="/menu">Menu</NavLink>
+        </li>
       </ul>
     </nav>
   );

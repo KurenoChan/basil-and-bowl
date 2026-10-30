@@ -1,4 +1,7 @@
+import { useNavigate } from "react-router-dom";
+
 export default function Home() {
+  const navigate = useNavigate();
 
   return (
     <div className="page">
@@ -19,6 +22,7 @@ export default function Home() {
           <button
             type="button"
             className="btn button"
+            onClick={() => navigate("/menu")}
           >
             View Menu
           </button>
